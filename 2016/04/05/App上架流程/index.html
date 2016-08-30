@@ -135,7 +135,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1930979-f7a2ab5d838a538f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1930979-e9e9e8c79acbf517.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1930979-2b0dc48cd89bcf63.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-08-30T14:50:08.000Z">
+<meta property="og:updated_time" content="2016-08-30T14:56:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="App上架流程">
 <meta name="twitter:description" content="一、创建App ID1.打开苹果开发者官网，点击“Account”登录会员中心。">
@@ -390,8 +390,7 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-c178cefbd8d5c46b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="8F7E44AC-2D2B-4745-816A-DD7494A60E3F.png"></p>
 <p>6 在桌面上看到下面的文件，证书请求文件完成</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-7c5a79c0eaa6ad2b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="BEE1606D-90C8-4EA6-B02E-8BA91DAE0121.png"></p>
-<p>###<strong>三、创建发布证书 (CER文件)</strong></p>
-<p>1 找到Certificates ，点击All，然后点击右上角 + 号</p>
+<h3 id="三、创建发布证书-CER文件"><a href="#三、创建发布证书-CER文件" class="headerlink" title="三、创建发布证书 (CER文件)"></a><strong>三、创建发布证书 (CER文件)</strong></h3><p>1 找到Certificates ，点击All，然后点击右上角 + 号</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-26e4e6d9860a8d95.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="89DA89AB-D558-4D0B-8315-721D09EA9C65.png"></p>
 <p>2 点击App Store and Ad Hoc</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-387ac62ede241a41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="0E0993A2-35D6-43D1-8F3F-997FEEA0F2E0.png"></p>
@@ -412,7 +411,7 @@
 <ol>
 <li>双击安装。如果安装不上，可以直接将证书文件拖拽到钥匙串访问的列表中<br>重点: 一般一个开发者帐号创建一个发布证书就够了，如果以后需要在其他电脑上上架App，只需要在钥匙串访问中创建p12文件，把p12文件安装到其他电脑上。这相当于给予了其他电脑发布App的权限。</li>
 </ol>
-<p>###<strong>四、创建Provisioning Profiles文件</strong><br>1.找到Provisioning Profiles ，点击All，然后点击右上角 + 号</p>
+<h3 id="四、创建Provisioning-Profiles文件"><a href="#四、创建Provisioning-Profiles文件" class="headerlink" title="四、创建Provisioning Profiles文件"></a><strong>四、创建Provisioning Profiles文件</strong></h3><p>1.找到Provisioning Profiles ，点击All，然后点击右上角 + 号</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-2c5322dabd2bae24.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="08699135-9E95-4683-8D8E-5A44B6248A36.png"></p>
 <p>2.选择App Store，点击Continue</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-ce9b440d0ba8b98c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="D295FDF8-4863-4C59-AB80-D59A38D2E9AA.png"></p>
@@ -427,8 +426,7 @@
 <p>6.Download生成的PP文件，然后点击Done</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-b3dfa5c658ec789e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="B8A9CC7F-3128-41FB-ACA9-2FC5D0EED937.png"></p>
 <p>双击就添加到Xcode中，这样在真机调试或者发布时，就可以分别有不同的PP证书与其对应。其实可以不用下载保存</p>
-<p>###<strong>五、在App Store创建应用</strong></p>
-<p>1、回到Account，点击iTunes Connect</p>
+<h3 id="五、在App-Store创建应用"><a href="#五、在App-Store创建应用" class="headerlink" title="五、在App Store创建应用"></a><strong>五、在App Store创建应用</strong></h3><p>1、回到Account，点击iTunes Connect</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-ad0db45b17eb31d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="D6421136-5750-4C0F-82DB-33117D32E35A.png"></p>
 <p>2、点击我的App</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-34ca70de50dc7862.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="8E08B348-1A7D-49B6-9DA7-4CA7BEFB320E.png"></p>
@@ -445,8 +443,7 @@
 <p>此时这个构建版本还没有生成，我们先把基本信息填写完毕，然后再进入Xcode中把项目打包发送到过来。注意：填写完一定要点击右上角的保存。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-8fb7492ec3b3c431.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="7E8C0952-3929-4997-882C-E286BEED87B7.png"></p>
 <p>不要忘记填写测试账号，否则会被拒的，而且一定要跟服务器同事说好，不要删除测试账号，否则同样被拒（联系号码 一定要+ 86 如：+86 13720329661）</p>
-<p>###<strong>六、打包上架</strong></p>
-<p>在Xcode中打包工程找到你刚刚下载的发布证书（后缀为.cer）或者p12文件，和PP文件，双击，看起来没反应，但是他们已经加入到你的钥匙串中。如果之前步骤已操作过，可省略此步。</p>
+<h3 id="六、打包上架"><a href="#六、打包上架" class="headerlink" title="六、打包上架"></a><strong>六、打包上架</strong></h3><p>在Xcode中打包工程找到你刚刚下载的发布证书（后缀为.cer）或者p12文件，和PP文件，双击，看起来没反应，但是他们已经加入到你的钥匙串中。如果之前步骤已操作过，可省略此步。</p>
 <p>1、打开Xcode，配置项目环境，点击+可以选择Add Apple ID；点击View Details可以查看该Apple Id下的Certificates和Provisioning Profile证书文件，在这里你可以点击下载。在项目Targets下的Identity中，Team选择对应的Apple ID 即可。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-09e5414b357caf97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="BD4D4576-66A5-486D-A002-0C4D710D6B42.png"></p>
 <p>特别注意： 这里填写的Apple ID 不是你自己手机上创建的Apple ID 一定要是 开发者账号的 账号和密码 （~QAQ~ 我就在这里被坑过）</p>
@@ -667,7 +664,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、创建App-ID"><span class="nav-number">1.</span> <span class="nav-text">一、创建App ID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、创建证书请求文件（CSR文件）"><span class="nav-number">2.</span> <span class="nav-text">二、创建证书请求文件（CSR文件）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、创建App-ID"><span class="nav-number">1.</span> <span class="nav-text">一、创建App ID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、创建证书请求文件（CSR文件）"><span class="nav-number">2.</span> <span class="nav-text">二、创建证书请求文件（CSR文件）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、创建发布证书-CER文件"><span class="nav-number">3.</span> <span class="nav-text">三、创建发布证书 (CER文件)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、创建Provisioning-Profiles文件"><span class="nav-number">4.</span> <span class="nav-text">四、创建Provisioning Profiles文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、在App-Store创建应用"><span class="nav-number">5.</span> <span class="nav-text">五、在App Store创建应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、打包上架"><span class="nav-number">6.</span> <span class="nav-text">六、打包上架</span></a></li></ol></div>
             
           </div>
         </section>
