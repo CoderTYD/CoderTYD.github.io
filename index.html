@@ -432,108 +432,13 @@
 
       
         
-          
-            <h3 id="一、创建App-ID"><a href="#一、创建App-ID" class="headerlink" title="一、创建App ID"></a><strong>一、创建App ID</strong></h3><p>1.打开苹果开发者官网，点击“Account”登录会员中心。</p>
+          <h3 id="一、创建App-ID"><a href="#一、创建App-ID" class="headerlink" title="一、创建App ID"></a><strong>一、创建App ID</strong></h3><p>1.打开苹果开发者官网，点击“Account”登录会员中心。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-9d8d44cb022c9c4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="5EBBB906-E192-4D9E-8A1E-0E633A67825E.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-a5eaa3dcc777a7e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="C9A14418-D457-4AD5-825E-A748609F69B9.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-bd66b2d49c42d54d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="A2BD880B-BB19-4B5C-94FD-638768DBCA61.png"></p>
-<p>2.填写信息创建app ID</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-b5151a2cdd8304ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="A2BD880B-BB19-4B5C-94FD-638768DBCA61.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-a7b6c84b378a68ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="847C4711-99BC-4B96-AD58-0A129C03E43E.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-65dbcde96c0ace1c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="DDE0EB86-7699-48EB-8B54-CD42A2DCA75D.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-fc6e0d2c26fac89a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="D41D2391-1EEE-4C25-A0B5-78A8F92245C5.png"></p>
-<h3 id="二、创建证书请求文件（CSR文件）"><a href="#二、创建证书请求文件（CSR文件）" class="headerlink" title="二、创建证书请求文件（CSR文件）"></a><strong>二、创建证书请求文件（CSR文件）</strong></h3><p>CRS文件主要用于 绑定你的电脑的<br>1 点开LaunchPad，在其他中找到打开钥匙串访问</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-4b86e5534b621759.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="85DEED3B-36D9-44D7-AE57-8F90A9F59665.png"></p>
-<p>2 点击电脑左上角的钥匙串访问–证书助理–从证书颁发机构请求证书</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-d661f4590afac773.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3542A329-7B4B-4D0B-B087-AA957245665D.png"></p>
-<p>3 出现如下界面，选择存储到磁盘，点击继续</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-8a83c1778dc1464a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="9174341D-DD72-49C4-A5E2-52EC2FDEA891.png"></p>
-<p>4 选择存储到桌面，存储</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-16c8248f272d0b53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="AC45F96B-35AC-4C16-838A-AFF74425EF1D.png"></p>
-<p>5 点击完成</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-c178cefbd8d5c46b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="8F7E44AC-2D2B-4745-816A-DD7494A60E3F.png"></p>
-<p>6 在桌面上看到下面的文件，证书请求文件完成</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-7c5a79c0eaa6ad2b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="BEE1606D-90C8-4EA6-B02E-8BA91DAE0121.png"></p>
-<p>###<strong>三、创建发布证书 (CER文件)</strong></p>
-<p>1 找到Certificates ，点击All，然后点击右上角 + 号</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-26e4e6d9860a8d95.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="89DA89AB-D558-4D0B-8315-721D09EA9C65.png"></p>
-<p>2 点击App Store and Ad Hoc</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-387ac62ede241a41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="0E0993A2-35D6-43D1-8F3F-997FEEA0F2E0.png"></p>
-<p>发布证书和开发者证书需要分别创建，操作两次，开发者证书用于真机调试，发布证书用于提交到AppStore。</p>
-<ol>
-<li>点击Continue</li>
-</ol>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-65440a3acd8e8872.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="FC1BC9F1-2BE4-4FE1-8585-DE55A3F38453.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-df5b599b5ef6f8c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="72A0DE52-A6E2-4A77-BDDD-88FC5E5A27CD.png"></p>
-<ol>
-<li>点击choose File.. 选择创建好的证书请求文件：CertificateSigningRequest.certSigningRequest 文件，点击Generate</li>
-</ol>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-e49b11a055bdc979.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="490D9D54-A5C7-4CA2-96AE-F1408744E977.png"></p>
-<ol>
-<li>点击Download下载创建好的发布证书（cer后缀的文件），然后点击Done，你创建的发布证书就会存储在帐号中。</li>
-</ol>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-d8f0fb04b87fa247.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="E3C6D120-6DFC-4234-9CAF-116E4C2AE977.png"></p>
-<ol>
-<li>双击安装。如果安装不上，可以直接将证书文件拖拽到钥匙串访问的列表中<br>重点: 一般一个开发者帐号创建一个发布证书就够了，如果以后需要在其他电脑上上架App，只需要在钥匙串访问中创建p12文件，把p12文件安装到其他电脑上。这相当于给予了其他电脑发布App的权限。</li>
-</ol>
-<p>###<strong>四、创建Provisioning Profiles文件</strong><br>1.找到Provisioning Profiles ，点击All，然后点击右上角 + 号</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-2c5322dabd2bae24.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="08699135-9E95-4683-8D8E-5A44B6248A36.png"></p>
-<p>2.选择App Store，点击Continue</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-ce9b440d0ba8b98c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="D295FDF8-4863-4C59-AB80-D59A38D2E9AA.png"></p>
-<p>该流程也需要进行两次，分别创建开发用的PP证书和发布的PP证书。</p>
-<p>3.在App ID 这个选项栏里面找到你刚刚创建的：App IDs（Bundle ID） 类型的套装，点击Continue</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-aa3cc341632c8572.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="AD5B5730-2942-453E-BB33-4976F2BDCB33.png"></p>
-<p>4.选择你刚创建的发布证书（或者生成p12文件的那个发布证书），点击Continue</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-c2a1a949df10014d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="AD5B5730-2942-453E-BB33-4976F2BDCB33.png"></p>
-<p>5.在Profile Name栏里输入一个名字（这个是PP文件的名字，可随便输入，在这里我用工程名字，便于分别），然后点击Generate</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-f444452a012fd888.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2276D9DE-669A-45BB-B95F-10F5C00613B2.png"></p>
-<p>注意：wildCard格式的证书没有推送，PassCard等服务的应用，慎重选择。因为PP证书的开发者证书需要真机调试，所以我们需要绑定真机，这里因为之前添加过一些设备，所以这里就可以直接全选添加，如果没有的话，需要将真机的udid复制出来在此添加。在发布PP文件中，是没有这一步的。</p>
-<p>6.Download生成的PP文件，然后点击Done</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-b3dfa5c658ec789e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="B8A9CC7F-3128-41FB-ACA9-2FC5D0EED937.png"></p>
-<p>双击就添加到Xcode中，这样在真机调试或者发布时，就可以分别有不同的PP证书与其对应。其实可以不用下载保存</p>
-<p>###<strong>五、在App Store创建应用</strong></p>
-<p>1、回到Account，点击iTunes Connect</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-ad0db45b17eb31d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="D6421136-5750-4C0F-82DB-33117D32E35A.png"></p>
-<p>2、点击我的App</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-34ca70de50dc7862.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="8E08B348-1A7D-49B6-9DA7-4CA7BEFB320E.png"></p>
-<p>3、点击新建 iOSApp</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-b3c9662e31f77683.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="46183125-BCF8-48BA-BBAA-4E9252FF8D09.png"></p>
-<p>4、依次按提示填入对应信息，然后点击创建</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-29d93bdf0b027513.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="BA8C6FD1-8134-467C-99E5-B01007A5A534.png"></p>
-<p>5、依次把不同尺寸的App截图拉入到对应的里面</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-ad427096806e3ddb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="E98D2026-558C-49AF-B8D6-48CC7D0D2F3A.png"></p>
-<p>6、填入App简介</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-1f399634ff7beed9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="CC594E6B-B08C-4058-80F8-45E96BA69B87.png"></p>
-<p>7、按提示依次输入</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-e30f4b648d12dc5b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="B26CEECC-E929-40E2-AA3D-2A3D50E94893.png"></p>
-<p>此时这个构建版本还没有生成，我们先把基本信息填写完毕，然后再进入Xcode中把项目打包发送到过来。注意：填写完一定要点击右上角的保存。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-8fb7492ec3b3c431.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="7E8C0952-3929-4997-882C-E286BEED87B7.png"></p>
-<p>不要忘记填写测试账号，否则会被拒的，而且一定要跟服务器同事说好，不要删除测试账号，否则同样被拒（联系号码 一定要+ 86 如：+86 13720329661）</p>
-<p>###<strong>六、打包上架</strong></p>
-<p>在Xcode中打包工程找到你刚刚下载的发布证书（后缀为.cer）或者p12文件，和PP文件，双击，看起来没反应，但是他们已经加入到你的钥匙串中。如果之前步骤已操作过，可省略此步。</p>
-<p>1、打开Xcode，配置项目环境，点击+可以选择Add Apple ID；点击View Details可以查看该Apple Id下的Certificates和Provisioning Profile证书文件，在这里你可以点击下载。在项目Targets下的Identity中，Team选择对应的Apple ID 即可。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-09e5414b357caf97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="BD4D4576-66A5-486D-A002-0C4D710D6B42.png"></p>
-<p>特别注意： 这里填写的Apple ID 不是你自己手机上创建的Apple ID 一定要是 开发者账号的 账号和密码 （~QAQ~ 我就在这里被坑过）</p>
-<p>2、选择模拟器为iOS Device，按照下图提示操作</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-410691b972a3a87d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="D9F66DE2-0F96-4102-97A2-F1EB35868779.png"></p>
-<p>3、修改.plist文件，两个.plist文件都要修改</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-64c92fb1cdbf2486.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="DCB4BC31-790B-4E3E-8738-83DB0BC072FD.png"></p>
-<p>4、Archive在线打包，在真机状态下选择Product——&gt;Archive，如果不是真机状态下，Archive会是灰色不可用的)。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-71d09e93203a943d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="283FC7B0-7BDE-4644-B7D1-C11F2226033D.png"></p>
-<p>5、打包之后会生成一个 ipa文件 ，然后返回我的App~~在构建版本处，点击Application Loader 就会将其下载下来，然后通过该软件把ipa文件上传到 appstore上。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-a02d37427b0bcad5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="008C3652-02C8-4902-850C-CDA8F49E7834.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-89e8027ca4dc1758.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="95CF2DAB-49BB-492A-8326-A50AF9E028E0.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-5d83e7d515fdf8a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="5A3D1062-3DFD-4CB6-B08A-8EB6D85EE0D9.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-f7a2ab5d838a538f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="28B4FF1D-D4FD-49B6-841D-6B2323C1A1DE.png"></p>
-<p>打包过程中 会出现的问题</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-e9e9e8c79acbf517.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="07CDA67A-0733-4488-8C93-641317A05BDC.png"></p>
-<p>解决方案：iOS- 打包时 UUID出错的解决方案</p>
-<p>application Loader 上传出现的错误</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-2b0dc48cd89bcf63.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="BE8406B4-8C0A-4288-A9A5-CA666E671586.png"></p>
-<p>6.发送成功后返回到我的App，刷新页面，在构建版本处就会有个 + 号，点击 + 号把发送过来的程序添加上去就行了</p>
-<p>7.提交审核</p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/05/App上架流程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
