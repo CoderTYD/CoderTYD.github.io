@@ -36,15 +36,37 @@
   </entry>
   
   <entry>
+    <title>第一篇文章</title>
+    <link href="http://yoursite.com/2016/08/30/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
+    <id>http://yoursite.com/2016/08/30/第一篇/</id>
+    <published>2016-08-30T01:23:07.000Z</published>
+    <updated>2016-08-30T03:09:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>用了6个小时搭建了自己的一个个人博客，其中遇到过很多坑。</p>
+<h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h2><p>Hexo是快速、简洁且高效的博客框架；依靠Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。<br>Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。<br>只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站。<br>Hexo 拥有强大的插件系统，安装插件可以让 Hexo 支持 Jade, CoffeeScript。</p>
+<p>总之，Hexo是目前最高逼格的博客系统</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;用了6个小时搭建了自己的一个个人博客，其中遇到过很多坑。&lt;/p&gt;
+&lt;h2 id=&quot;什么是Hexo&quot;&gt;&lt;a href=&quot;#什么是Hexo&quot; class=&quot;headerlink&quot; title=&quot;什么是Hexo&quot;&gt;&lt;/a&gt;什么是Hexo&lt;/h2&gt;&lt;p&gt;Hexo是快速、简洁且高效的
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>CocoaPods安装失败解决办法,重装</title>
-    <link href="http://yoursite.com/2016/08/30/CocoaPods%E5%AE%89%E8%A3%85/"/>
-    <id>http://yoursite.com/2016/08/30/CocoaPods安装/</id>
-    <published>2016-08-30T03:30:09.000Z</published>
-    <updated>2016-08-30T03:30:09.000Z</updated>
+    <link href="http://yoursite.com/2016/03/04/CocoaPods%E5%AE%89%E8%A3%85/"/>
+    <id>http://yoursite.com/2016/03/04/CocoaPods安装/</id>
+    <published>2016-03-04T12:34:12.000Z</published>
+    <updated>2016-08-30T03:39:46.000Z</updated>
     
     <content type="html"><![CDATA[<p>cocoapods报错, 报错, 报错… </p>
 <p>  OK,下面步入正题 在安装CocoaPods之前，首先要在本地安装好Ruby环境。</p>
-<p>  MAC系统自带ruby环境但是某些老旧机型可能ruby版本过低会报错,不过更新一下就好,而安装ruby需要RVM </p>
+<p>  MAC系统自带ruby环境但是某些老旧机型可能ruby版本过低会报错,不过更新一下就好,而安装ruby需要RVM<br><a id="more"></a></p>
 <p>####步骤0 － 准备工作<br>首先需要切换到淘宝镜像服务器不然下面各个步奏会异常的卡顿(如果你曾经切换过可以查询出来) </p>
 <p>查看CocoaPods版本:</p>
 <blockquote>
@@ -81,7 +103,7 @@
 </blockquote>
 <p>会输出:</p>
 <blockquote>
-<p>rvm 1.27.0 (latest) by Wayne E. Seguin <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#119;&#x61;&#x79;&#110;&#101;&#101;&#x73;&#x65;&#103;&#117;&#105;&#110;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#119;&#x61;&#x79;&#110;&#101;&#101;&#x73;&#x65;&#103;&#117;&#105;&#110;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a>, Michal Papis <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x6d;&#112;&#x61;&#112;&#105;&#x73;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x6d;&#112;&#x61;&#112;&#105;&#x73;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a> [<a href="https://rvm.io/" target="_blank" rel="external">https://rvm.io/</a>]</p>
+<p>rvm 1.27.0 (latest) by Wayne E. Seguin <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#119;&#97;&#x79;&#110;&#x65;&#101;&#115;&#x65;&#103;&#x75;&#x69;&#x6e;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;">&#119;&#97;&#x79;&#110;&#x65;&#101;&#115;&#x65;&#103;&#x75;&#x69;&#x6e;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;</a>, Michal Papis <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x6d;&#x70;&#x61;&#112;&#105;&#115;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x6d;&#x70;&#x61;&#112;&#105;&#115;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a> [<a href="https://rvm.io/" target="_blank" rel="external">https://rvm.io/</a>]</p>
 </blockquote>
 <p>####步骤2 － 用 RVM 安装 Ruby 环境</p>
 <blockquote>
@@ -119,29 +141,7 @@
     
       &lt;p&gt;cocoapods报错, 报错, 报错… &lt;/p&gt;
 &lt;p&gt;  OK,下面步入正题 在安装CocoaPods之前，首先要在本地安装好Ruby环境。&lt;/p&gt;
-&lt;p&gt;  MAC系统自带ruby环境但是某些老旧机型可能ruby版本过低会报错,不过更新一下就好,而安装ruby需要RV
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>第一篇文章</title>
-    <link href="http://yoursite.com/2016/08/30/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
-    <id>http://yoursite.com/2016/08/30/第一篇/</id>
-    <published>2016-08-30T01:23:07.000Z</published>
-    <updated>2016-08-30T03:09:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>用了6个小时搭建了自己的一个个人博客，其中遇到过很多坑。</p>
-<h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h2><p>Hexo是快速、简洁且高效的博客框架；依靠Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。<br>Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。<br>只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站。<br>Hexo 拥有强大的插件系统，安装插件可以让 Hexo 支持 Jade, CoffeeScript。</p>
-<p>总之，Hexo是目前最高逼格的博客系统</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;用了6个小时搭建了自己的一个个人博客，其中遇到过很多坑。&lt;/p&gt;
-&lt;h2 id=&quot;什么是Hexo&quot;&gt;&lt;a href=&quot;#什么是Hexo&quot; class=&quot;headerlink&quot; title=&quot;什么是Hexo&quot;&gt;&lt;/a&gt;什么是Hexo&lt;/h2&gt;&lt;p&gt;Hexo是快速、简洁且高效的
+&lt;p&gt;  MAC系统自带ruby环境但是某些老旧机型可能ruby版本过低会报错,不过更新一下就好,而安装ruby需要RVM&lt;br&gt;
     
     </summary>
     
