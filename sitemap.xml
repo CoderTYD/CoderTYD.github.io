@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/08/30/%E7%AC%AC%E4%B8%80%E7%AF%87/</loc>
+    
+    <lastmod>2016-08-30T07:47:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/archive/index.html</loc>
     
     <lastmod>2016-08-30T06:06:26.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://yoursite.com/2016/03/04/CocoaPods%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2016-08-30T03:39:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/08/30/%E7%AC%AC%E4%B8%80%E7%AF%87/</loc>
-    
-    <lastmod>2016-08-30T03:09:52.000Z</lastmod>
     
   </url>
   
