@@ -87,24 +87,18 @@
 
 
 <meta name="description" content="前言：AFNetworking是一个非常方便的网络请求库，可以轻松实现各种网络请求，比如经常使用的GET请求、POST请求，以及上传多张图片等;
-通常来说，AFNetworking已经是高度封装的了，在用到AFNetworking发请求的类里，我们直接可以调用.
-AFNetworking的API。但是，在实际开发中，我们常常将设备、版本、和账户等信息，在接口中作为参数集中提交
-到服务器。而网络请求">
+通常来说，AFNetworking已经是高度封装的了，在用到AFNetworking发请求的类里，我们直接可以调用.AFNetworking的API。但是，在实际开发中，我们常常将设备、版本、和账户等信息，在接口中作为参数集中提交到服务器。而网络请求异常">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AFNetworking封装">
 <meta property="og:url" content="http://yoursite.com/2016/06/13/AFNetworking二次封装/index.html">
 <meta property="og:site_name" content="唐半仙">
 <meta property="og:description" content="前言：AFNetworking是一个非常方便的网络请求库，可以轻松实现各种网络请求，比如经常使用的GET请求、POST请求，以及上传多张图片等;
-通常来说，AFNetworking已经是高度封装的了，在用到AFNetworking发请求的类里，我们直接可以调用.
-AFNetworking的API。但是，在实际开发中，我们常常将设备、版本、和账户等信息，在接口中作为参数集中提交
-到服务器。而网络请求">
-<meta property="og:updated_time" content="2016-08-31T08:04:57.000Z">
+通常来说，AFNetworking已经是高度封装的了，在用到AFNetworking发请求的类里，我们直接可以调用.AFNetworking的API。但是，在实际开发中，我们常常将设备、版本、和账户等信息，在接口中作为参数集中提交到服务器。而网络请求异常">
+<meta property="og:updated_time" content="2016-08-31T09:06:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AFNetworking封装">
 <meta name="twitter:description" content="前言：AFNetworking是一个非常方便的网络请求库，可以轻松实现各种网络请求，比如经常使用的GET请求、POST请求，以及上传多张图片等;
-通常来说，AFNetworking已经是高度封装的了，在用到AFNetworking发请求的类里，我们直接可以调用.
-AFNetworking的API。但是，在实际开发中，我们常常将设备、版本、和账户等信息，在接口中作为参数集中提交
-到服务器。而网络请求">
+通常来说，AFNetworking已经是高度封装的了，在用到AFNetworking发请求的类里，我们直接可以调用.AFNetworking的API。但是，在实际开发中，我们常常将设备、版本、和账户等信息，在接口中作为参数集中提交到服务器。而网络请求异常">
 
 
 
@@ -334,14 +328,11 @@ AFNetworking的API。但是，在实际开发中，我们常常将设备、版�
 
       
         <h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p><code>AFNetworking</code>是一个非常方便的网络请求库，可以轻松实现各种网络请求，比如经常使用的GET请求、POST请求，以及上传多张图片等;</p>
-<p><em>通常来说，<code>AFNetworking</code>已经是高度封装的了，在用到AFNetworking发请求的类里，我们直接可以调用.</em></p>
-<p><em><code>AFNetworking</code>的API。但是，在实际开发中，我们常常将设备、版本、和账户等信息，在接口中作为参数集中提交</em></p>
-<p><em>到服务器。而网络请求异常等信息，也希望集中处理。这时，在每个调用<code>AFNetworking</code>的地方分别处理就比较麻烦,</em></p>
-<p><em>单独封装一个网略请求类，做集中处理，会跟方便管理，也便于复用和扩展。</em></p>
-<p><strong>正文：</strong></p>
+<p>通常来说，<code>AFNetworking</code>已经是高度封装的了，在用到AFNetworking发请求的类里，我们直接可以调用.<br><code>AFNetworking</code>的API。但是，在实际开发中，我们常常将设备、版本、和账户等信息，在接口中作为参数集中提交<br>到服务器。而网络请求异常等信息，也希望集中处理。这时，在每个调用<code>AFNetworking</code>的地方分别处理就比较麻烦,<br>单独封装一个网略请求类，做集中处理，会跟方便管理，也便于复用和扩展。</p>
+<hr>
+<a id="more"></a>
 <p>我最常用到的就是<code>get</code>,<code>post</code>,<code>upload</code>及<code>download</code>了。</p>
 <p>说了这么多的废话了来点干货，直接上代码。</p>
-<a id="more"></a>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="1、封装方法"><a href="#1、封装方法" class="headerlink" title="1、封装方法"></a>1、封装方法</h4><p><strong>UploadParam.h文件</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line"></div><div class="line">@interface UploadParam : NSObject</div><div class="line">/**</div><div class="line"> *  图片的二进制数据</div><div class="line"> */</div><div class="line">@property (nonatomic, strong) NSData *data;</div><div class="line">/**</div><div class="line"> *  服务器对应的参数名称</div><div class="line"> */</div><div class="line">@property (nonatomic, copy) NSString *name;</div><div class="line">/**</div><div class="line"> *  文件的名称(上传到服务器后，服务器保存的文件名)</div><div class="line"> */</div><div class="line">@property (nonatomic, copy) NSString *filename;</div><div class="line">/**</div><div class="line"> *  文件的MIME类型(image/png,image/jpg等)</div><div class="line"> */</div><div class="line">@property (nonatomic, copy) NSString *mimeType;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>
 <p><strong>UploadParam.m文件</strong></p>

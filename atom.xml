@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-08-31T08:04:57.000Z</updated>
+  <updated>2016-08-31T09:06:50.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,17 +20,14 @@
     <link href="http://yoursite.com/2016/06/13/AFNetworking%E4%BA%8C%E6%AC%A1%E5%B0%81%E8%A3%85/"/>
     <id>http://yoursite.com/2016/06/13/AFNetworking二次封装/</id>
     <published>2016-06-13T12:46:25.000Z</published>
-    <updated>2016-08-31T08:04:57.000Z</updated>
+    <updated>2016-08-31T09:06:50.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p><code>AFNetworking</code>是一个非常方便的网络请求库，可以轻松实现各种网络请求，比如经常使用的GET请求、POST请求，以及上传多张图片等;</p>
-<p><em>通常来说，<code>AFNetworking</code>已经是高度封装的了，在用到AFNetworking发请求的类里，我们直接可以调用.</em></p>
-<p><em><code>AFNetworking</code>的API。但是，在实际开发中，我们常常将设备、版本、和账户等信息，在接口中作为参数集中提交</em></p>
-<p><em>到服务器。而网络请求异常等信息，也希望集中处理。这时，在每个调用<code>AFNetworking</code>的地方分别处理就比较麻烦,</em></p>
-<p><em>单独封装一个网略请求类，做集中处理，会跟方便管理，也便于复用和扩展。</em></p>
-<p><strong>正文：</strong></p>
+<p>通常来说，<code>AFNetworking</code>已经是高度封装的了，在用到AFNetworking发请求的类里，我们直接可以调用.<br><code>AFNetworking</code>的API。但是，在实际开发中，我们常常将设备、版本、和账户等信息，在接口中作为参数集中提交<br>到服务器。而网络请求异常等信息，也希望集中处理。这时，在每个调用<code>AFNetworking</code>的地方分别处理就比较麻烦,<br>单独封装一个网略请求类，做集中处理，会跟方便管理，也便于复用和扩展。</p>
+<hr>
+<a id="more"></a>
 <p>我最常用到的就是<code>get</code>,<code>post</code>,<code>upload</code>及<code>download</code>了。</p>
 <p>说了这么多的废话了来点干货，直接上代码。</p>
-<a id="more"></a>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="1、封装方法"><a href="#1、封装方法" class="headerlink" title="1、封装方法"></a>1、封装方法</h4><p><strong>UploadParam.h文件</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">#import &lt;Foundation/Foundation.h&gt;</div><div class="line"></div><div class="line">@interface UploadParam : NSObject</div><div class="line">/**</div><div class="line"> *  图片的二进制数据</div><div class="line"> */</div><div class="line">@property (nonatomic, strong) NSData *data;</div><div class="line">/**</div><div class="line"> *  服务器对应的参数名称</div><div class="line"> */</div><div class="line">@property (nonatomic, copy) NSString *name;</div><div class="line">/**</div><div class="line"> *  文件的名称(上传到服务器后，服务器保存的文件名)</div><div class="line"> */</div><div class="line">@property (nonatomic, copy) NSString *filename;</div><div class="line">/**</div><div class="line"> *  文件的MIME类型(image/png,image/jpg等)</div><div class="line"> */</div><div class="line">@property (nonatomic, copy) NSString *mimeType;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>
 <p><strong>UploadParam.m文件</strong></p>
@@ -60,13 +57,8 @@
     <summary type="html">
     
       &lt;h3 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h3&gt;&lt;p&gt;&lt;code&gt;AFNetworking&lt;/code&gt;是一个非常方便的网络请求库，可以轻松实现各种网络请求，比如经常使用的GET请求、POST请求，以及上传多张图片等;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;通常来说，&lt;code&gt;AFNetworking&lt;/code&gt;已经是高度封装的了，在用到AFNetworking发请求的类里，我们直接可以调用.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;code&gt;AFNetworking&lt;/code&gt;的API。但是，在实际开发中，我们常常将设备、版本、和账户等信息，在接口中作为参数集中提交&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;到服务器。而网络请求异常等信息，也希望集中处理。这时，在每个调用&lt;code&gt;AFNetworking&lt;/code&gt;的地方分别处理就比较麻烦,&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;单独封装一个网略请求类，做集中处理，会跟方便管理，也便于复用和扩展。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;正文：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;我最常用到的就是&lt;code&gt;get&lt;/code&gt;,&lt;code&gt;post&lt;/code&gt;,&lt;code&gt;upload&lt;/code&gt;及&lt;code&gt;download&lt;/code&gt;了。&lt;/p&gt;
-&lt;p&gt;说了这么多的废话了来点干货，直接上代码。&lt;/p&gt;
+&lt;p&gt;通常来说，&lt;code&gt;AFNetworking&lt;/code&gt;已经是高度封装的了，在用到AFNetworking发请求的类里，我们直接可以调用.&lt;br&gt;&lt;code&gt;AFNetworking&lt;/code&gt;的API。但是，在实际开发中，我们常常将设备、版本、和账户等信息，在接口中作为参数集中提交&lt;br&gt;到服务器。而网络请求异常等信息，也希望集中处理。这时，在每个调用&lt;code&gt;AFNetworking&lt;/code&gt;的地方分别处理就比较麻烦,&lt;br&gt;单独封装一个网略请求类，做集中处理，会跟方便管理，也便于复用和扩展。&lt;/p&gt;
+&lt;hr&gt;
     
     </summary>
     
@@ -334,7 +326,7 @@
 </blockquote>
 <p>会输出:</p>
 <blockquote>
-<p>rvm 1.27.0 (latest) by Wayne E. Seguin <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x77;&#97;&#121;&#110;&#101;&#101;&#115;&#x65;&#x67;&#x75;&#105;&#x6e;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#x77;&#97;&#121;&#110;&#101;&#101;&#115;&#x65;&#x67;&#x75;&#105;&#x6e;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a>, Michal Papis <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#109;&#x70;&#x61;&#112;&#105;&#115;&#64;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;">&#109;&#x70;&#x61;&#112;&#105;&#115;&#64;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;</a> [<a href="https://rvm.io/" target="_blank" rel="external">https://rvm.io/</a>]</p>
+<p>rvm 1.27.0 (latest) by Wayne E. Seguin <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#119;&#97;&#121;&#x6e;&#101;&#101;&#x73;&#101;&#x67;&#117;&#105;&#x6e;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#119;&#97;&#121;&#x6e;&#101;&#101;&#x73;&#101;&#x67;&#117;&#105;&#x6e;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;</a>, Michal Papis <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#109;&#x70;&#97;&#112;&#x69;&#x73;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;">&#109;&#x70;&#97;&#112;&#x69;&#x73;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;</a> [<a href="https://rvm.io/" target="_blank" rel="external">https://rvm.io/</a>]</p>
 </blockquote>
 <p>####步骤2 － 用 RVM 安装 Ruby 环境</p>
 <blockquote>
