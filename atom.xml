@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-08-31T13:05:20.000Z</updated>
+  <updated>2016-08-31T13:10:45.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/06/13/AFNetworking%E4%BA%8C%E6%AC%A1%E5%B0%81%E8%A3%85/"/>
     <id>http://yoursite.com/2016/06/13/AFNetworking二次封装/</id>
     <published>2016-06-13T12:46:25.000Z</published>
-    <updated>2016-08-31T13:05:20.000Z</updated>
+    <updated>2016-08-31T13:10:45.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p><code>AFNetworking</code>是一个非常方便的网络请求库，可以轻松实现各种网络请求，比如经常使用的GET请求、POST请求，以及上传多张图片等;</p>
 <p>通常来说，<code>AFNetworking</code>已经是高度封装的了，在用到AFNetworking发请求的类里，我们直接可以调用.<br><code>AFNetworking</code>的API。但是，在实际开发中，我们常常将设备、版本、和账户等信息，在接口中作为参数集中提交<br>到服务器。而网络请求异常等信息，也希望集中处理。这时，在每个调用<code>AFNetworking</code>的地方分别处理就比较麻烦,<br>单独封装一个网略请求类，做集中处理，会跟方便管理，也便于复用和扩展。</p>
@@ -326,7 +326,7 @@
 </blockquote>
 <p>会输出:</p>
 <blockquote>
-<p>rvm 1.27.0 (latest) by Wayne E. Seguin <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#x77;&#x61;&#121;&#x6e;&#x65;&#x65;&#x73;&#101;&#103;&#x75;&#105;&#110;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x77;&#x61;&#121;&#x6e;&#x65;&#x65;&#x73;&#101;&#103;&#x75;&#105;&#110;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a>, Michal Papis <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#109;&#112;&#97;&#x70;&#105;&#115;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#109;&#112;&#97;&#x70;&#105;&#115;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a> [<a href="https://rvm.io/" target="_blank" rel="external">https://rvm.io/</a>]</p>
+<p>rvm 1.27.0 (latest) by Wayne E. Seguin <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#58;&#x77;&#97;&#x79;&#x6e;&#101;&#101;&#115;&#x65;&#103;&#x75;&#105;&#x6e;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#109;">&#x77;&#97;&#x79;&#x6e;&#101;&#101;&#115;&#x65;&#103;&#x75;&#105;&#x6e;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#109;</a>, Michal Papis <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x6d;&#112;&#x61;&#x70;&#x69;&#115;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#x6d;&#112;&#x61;&#x70;&#x69;&#115;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a> [<a href="https://rvm.io/" target="_blank" rel="external">https://rvm.io/</a>]</p>
 </blockquote>
 <p>####步骤2 － 用 RVM 安装 Ruby 环境</p>
 <blockquote>
