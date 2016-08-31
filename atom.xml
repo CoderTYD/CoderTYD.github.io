@@ -285,13 +285,12 @@
     <link href="http://yoursite.com/2015/06/04/CocoaPods%E5%AE%89%E8%A3%85/"/>
     <id>http://yoursite.com/2015/06/04/CocoaPods安装/</id>
     <published>2015-06-04T12:34:12.000Z</published>
-    <updated>2016-08-31T13:36:45.000Z</updated>
+    <updated>2016-08-31T13:45:08.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>CocoaPods</strong>报错, 报错, 报错… </p>
 <p>  OK,下面步入正题 在安装CocoaPods之前，首先要在本地安装好Ruby环境。</p>
 <p>  MAC系统自带ruby环境但是某些老旧机型可能ruby版本过低会报错,不过更新一下就好,而安装ruby需要RVM<br><a id="more"></a></p>
-<p>####步骤0 － 准备工作<br>首先需要切换到淘宝镜像服务器不然下面各个步奏会异常的卡顿(如果你曾经切换过可以查询出来) </p>
-<p>查看CocoaPods版本:</p>
+<h3 id="步骤0-－-准备工作"><a href="#步骤0-－-准备工作" class="headerlink" title="步骤0 － 准备工作"></a>步骤0 － 准备工作</h3><p>首先需要切换到淘宝镜像服务器不然下面各个步奏会异常的卡顿(如果你曾经切换过可以查询出来)<br>查看CocoaPods版本:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod --version</div></pre></td></tr></table></figure>
 <p> 移除现有Ruby默认源:</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem sources --remove https://rubygems.org/</div></pre></td></tr></table></figure>
@@ -313,7 +312,7 @@
 <p>　 检查一下是否安装正确<br>　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rvm -v</div></pre></td></tr></table></figure></p>
 <p>会输出:</p>
 <blockquote>
-<p>rvm 1.27.0 (latest) by Wayne E. Seguin <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#119;&#97;&#x79;&#110;&#x65;&#101;&#x73;&#101;&#x67;&#117;&#105;&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#119;&#97;&#x79;&#110;&#x65;&#101;&#x73;&#101;&#x67;&#117;&#105;&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a>, Michal Papis <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#x6d;&#112;&#97;&#112;&#105;&#x73;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x6d;&#112;&#97;&#112;&#105;&#x73;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a> [<a href="https://rvm.io/" target="_blank" rel="external">https://rvm.io/</a>]</p>
+<p>rvm 1.27.0 (latest) by Wayne E. Seguin <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x77;&#97;&#x79;&#110;&#101;&#x65;&#x73;&#101;&#103;&#117;&#x69;&#x6e;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#109;">&#x77;&#97;&#x79;&#110;&#101;&#x65;&#x73;&#101;&#103;&#117;&#x69;&#x6e;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#109;</a>, Michal Papis <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#x6d;&#x70;&#x61;&#112;&#105;&#115;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x6d;&#x70;&#x61;&#112;&#105;&#115;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a> [<a href="https://rvm.io/" target="_blank" rel="external">https://rvm.io/</a>]</p>
 </blockquote>
 <h3 id="步骤2-－-用-RVM-安装-Ruby-环境"><a href="#步骤2-－-用-RVM-安装-Ruby-环境" class="headerlink" title="步骤2 － 用 RVM 安装 Ruby 环境"></a>步骤2 － 用 RVM 安装 Ruby 环境</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rvm install 2.0.0</div></pre></td></tr></table></figure>
 <p>这个网址有现有的Ruby版本信息: </p>
@@ -322,12 +321,19 @@
 </blockquote>
 <p>　 同样继续等待漫长的下载，编译过程，完成以后，Ruby, Ruby Gems 就安装好了。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-d657a2d38f066855.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="FB59AF38-B8D0-471B-B432-01C285B7E51E.png"></p>
-<h3 id="步骤3-－-设置-Ruby-版本"><a href="#步骤3-－-设置-Ruby-版本" class="headerlink" title="步骤3 － 设置 Ruby 版本"></a>步骤3 － 设置 Ruby 版本</h3><p> RVM 装好以后，需要执行下面的命令将指定版本的 Ruby 设置为系统默认版本</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rvm 2.0.0 --default</div></pre></td></tr></table></figure>
+<h3 id="步骤3-－-设置-Ruby-版本"><a href="#步骤3-－-设置-Ruby-版本" class="headerlink" title="步骤3 － 设置 Ruby 版本"></a>步骤3 － 设置 Ruby 版本</h3><p>RVM 装好以后，需要执行下面的命令将指定版本的 Ruby 设置为系统默认版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rvm 2.0.0 --default</div></pre></td></tr></table></figure>
 <p>同样，也可以用其他版本号，前提是你有用 rvm install 安装过那个版本 这个时候你可以测试是否正确</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ruby -v　</div><div class="line">```　　　</div><div class="line"></div><div class="line">&gt;输出 : ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-darwin13.0.0]　　　　</div><div class="line"></div><div class="line">### 步骤4 － 安装cocoa pods</div><div class="line">第四步才是正题</div></pre></td></tr></table></figure>
-<p>sudo gem install cocoa pods<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">![70856AFD-6F84-485E-B156-DB1C14F89FE9.png](http://upload-images.jianshu.io/upload_images/1930979-32b2f2ce2c34e8da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line"></div><div class="line">就安装完了. 这时你可以</div></pre></td></tr></table></figure></p>
-<p>pod search AFNetworking<br>```</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby -v</div></pre></td></tr></table></figure>
+<p>　　</p>
+<blockquote>
+<p>输出 : ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-darwin13.0.0]</p>
+</blockquote>
+<h3 id="步骤4-－-安装cocoa-pods"><a href="#步骤4-－-安装cocoa-pods" class="headerlink" title="步骤4 － 安装cocoa pods"></a>步骤4 － 安装cocoa pods</h3><p>第四步才是正题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install cocoa pods</div></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/1930979-32b2f2ce2c34e8da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="70856AFD-6F84-485E-B156-DB1C14F89FE9.png"></p>
+<p>就安装完了. 这时你可以</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod search AFNetworking</div></pre></td></tr></table></figure>
 <p>来检测一下 如果:</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-74a09ea3a10bd92f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="5C7F3197-8167-4E31-9926-AA52EDDE8D35.png"></p>
 <p>就说明成功了.</p>
@@ -365,7 +371,7 @@
 <h3 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h3><p> 将知识整理出来的同时，自己的知识也得到了梳理，而且更加牢固，不仅帮助了别人，同时也帮助了自己，这种共赢何乐而不为。就像现在开源大潮一发不可收拾，各大互联网公司都把自己的很多技术都开源一样。这是一个良性循环，实现了众赢。提一下，我也是一个开源技术受益的开发者。对于我们从事技术工作的，同样也要营造这种良性循环。</p>
 <h3 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h3><ul>
 <li>微博：<a href="http://weibo.com/codertyd" target="_blank" rel="external">@唐半仙丶</a></li>
-<li>邮箱：<a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x6c;&#x65;&#97;&#x64;&#x65;&#x72;&#54;&#x38;&#x38;&#x31;&#64;&#x31;&#54;&#51;&#x2e;&#99;&#111;&#109;">&#x6c;&#x65;&#97;&#x64;&#x65;&#x72;&#54;&#x38;&#x38;&#x31;&#64;&#x31;&#54;&#51;&#x2e;&#99;&#111;&#109;</a></li>
+<li>邮箱：<a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#108;&#101;&#97;&#x64;&#x65;&#114;&#x36;&#x38;&#x38;&#49;&#x40;&#x31;&#x36;&#51;&#46;&#99;&#x6f;&#x6d;">&#108;&#101;&#97;&#x64;&#x65;&#114;&#x36;&#x38;&#x38;&#49;&#x40;&#x31;&#x36;&#51;&#46;&#99;&#x6f;&#x6d;</a></li>
 </ul>
 ]]></content>
     
