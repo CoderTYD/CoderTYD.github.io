@@ -1,0 +1,716 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Apple Pay,支付," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="唐半仙" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="什么是Apple PayApple Pay，是苹果公司在2014苹果秋季新品发布会上发布的一种基于NFC的手机支付功能，于2014年10月20日在美国正式上线。2016年2月18日中国上线。
+Apple Pay支持的设备iPhone系列：iPhone 6、iPhone6 Plus、iPhone 6s、iPhone 6s Plus、iPhone SE
+iPad系列：iPad Air 2、iPad m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apple Pay支付功能集成">
+<meta property="og:url" content="http://yoursite.com/2016/03/18/Apple Pay支付功能集成/index.html">
+<meta property="og:site_name" content="唐半仙">
+<meta property="og:description" content="什么是Apple PayApple Pay，是苹果公司在2014苹果秋季新品发布会上发布的一种基于NFC的手机支付功能，于2014年10月20日在美国正式上线。2016年2月18日中国上线。
+Apple Pay支持的设备iPhone系列：iPhone 6、iPhone6 Plus、iPhone 6s、iPhone 6s Plus、iPhone SE
+iPad系列：iPad Air 2、iPad m">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1930979-6b38a8f6d6c96392.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1930979-2f78bdc3fbe1a0a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1930979-2d8e0e5f69befde2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-08-31T08:41:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Apple Pay支付功能集成">
+<meta name="twitter:description" content="什么是Apple PayApple Pay，是苹果公司在2014苹果秋季新品发布会上发布的一种基于NFC的手机支付功能，于2014年10月20日在美国正式上线。2016年2月18日中国上线。
+Apple Pay支持的设备iPhone系列：iPhone 6、iPhone6 Plus、iPhone 6s、iPhone 6s Plus、iPhone SE
+iPad系列：iPad Air 2、iPad m">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1930979-6b38a8f6d6c96392.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/03/18/Apple Pay支付功能集成/"/>
+
+  <title> Apple Pay支付功能集成 | 唐半仙 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?858d78fdd3804edf372cc270b764bc8e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">唐半仙</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">iOS 开发工程师</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Apple Pay支付功能集成
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-18T20:46:25+08:00" content="2016-03-18">
+              2016-03-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/支付/" itemprop="url" rel="index">
+                    <span itemprop="name">支付</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/18/Apple Pay支付功能集成/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/18/Apple Pay支付功能集成/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="什么是Apple-Pay"><a href="#什么是Apple-Pay" class="headerlink" title="什么是Apple Pay"></a>什么是Apple Pay</h3><p><strong>Apple Pay</strong>，是苹果公司在2014苹果秋季新品发布会上发布的一种基于<strong>NFC</strong>的手机支付功能，于2014年10月20日在美国正式上线。2016年2月18日中国上线。</p>
+<h3 id="Apple-Pay支持的设备"><a href="#Apple-Pay支持的设备" class="headerlink" title="Apple Pay支持的设备"></a>Apple Pay支持的设备</h3><p><strong>iPhone系列</strong>：iPhone 6、iPhone6 Plus、iPhone 6s、iPhone 6s Plus、iPhone SE</p>
+<p><strong>iPad系列</strong>：iPad Air 2、iPad mini 3、iPad mini 4、iPad Pro</p>
+<p><strong>Apple Watch</strong></p>
+<p><strong>注意</strong>：<code>iPhone 5</code>和<code>iPhone 5s</code>本身并不支持，而是连接到它们的<code>Apple Watch</code>可以用，因为5系列的手机不带<strong>NFC</strong>。</p>
+<h3 id="Apple-Pay系统要求"><a href="#Apple-Pay系统要求" class="headerlink" title="Apple Pay系统要求"></a>Apple Pay系统要求</h3><p>iOS需升级到9.2及以上，Watch OS需要2.1或更高版本。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1930979-6b38a8f6d6c96392.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ApplePay1.png"></p>
+<a id="more"></a>
+<h3 id="Apple-Pay集成"><a href="#Apple-Pay集成" class="headerlink" title="Apple Pay集成"></a>Apple Pay集成</h3><p><a href="https://developer.apple.com/apple-pay/get-started/cn/" target="_blank" rel="external">Apple Pay官方文档</a></p>
+<hr>
+<p><strong>官网证书</strong></p>
+<p>1.登录开发者账号，添加App ID（记得勾选下面的Apple Pay）</p>
+<p>2.添加Merchant IDs</p>
+<p>3.将创建的App ID里面的Apple Pay设置自己的Merchant IDs</p>
+<p>4.检查App ID里面的Apple Pay的两个选项是否都为绿色</p>
+<p>5.创建Merchant证书，绑定App ID并安装</p>
+<p><strong>设置 Xcode</strong></p>
+<p>在Xcode中，将<code>Capabilities</code>中的Apple Pay开启</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1930979-2f78bdc3fbe1a0a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ApplePay3.png"></p>
+<p>中间会生成你设置的App ID，将其勾选。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1930979-2d8e0e5f69befde2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3CE5FADB-B998-45F8-8445-586EE856BD33.png"></p>
+<p><strong>代码实现</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div></pre></td><td class="code"><pre><div class="line">#import &quot;ViewController.h&quot;</div><div class="line">#import &lt;PassKit/PassKit.h&gt;</div><div class="line">@interface ViewController ()</div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">@implementation ViewController</div><div class="line"></div><div class="line">- (void)viewDidLoad &#123;</div><div class="line">    [super viewDidLoad];</div><div class="line">    // Do any additional setup after loading the view, typically from a nib.</div><div class="line">    </div><div class="line">    //1.是否支持Apple Pay</div><div class="line">    if (![PKPaymentAuthorizationViewController canMakePayments])</div><div class="line">    &#123;</div><div class="line">        NSLog(@&quot;不支持Apple Pay&quot;);</div><div class="line">        // 判断是否添加了银行卡</div><div class="line">    &#125;else if(![PKPaymentAuthorizationViewController canMakePaymentsUsingNetworks:@[PKPaymentNetworkVisa,PKPaymentNetworkChinaUnionPay]])</div><div class="line">    &#123;</div><div class="line">        //跳转到添加银行卡</div><div class="line">        PKPaymentButton * btn = [PKPaymentButton buttonWithType:PKPaymentButtonTypeSetUp style:PKPaymentButtonStyleWhiteOutline];</div><div class="line">        btn.frame  = CGRectMake(100, 100, 100, 20);</div><div class="line">        [btn addTarget:self  action:@selector(jump) forControlEvents:UIControlEventTouchUpInside];</div><div class="line">        [self.view addSubview:btn];</div><div class="line">    &#125;else</div><div class="line">    &#123;</div><div class="line">        //创建购买按钮</div><div class="line">        PKPaymentButton * btn = [PKPaymentButton buttonWithType:PKPaymentButtonTypeBuy style:PKPaymentButtonStyleBlack];</div><div class="line">        btn.frame  = CGRectMake(100, 100, 100, 20);</div><div class="line">        [btn addTarget:self  action:@selector(buy) forControlEvents:UIControlEventTouchUpInside];</div><div class="line">        [self.view addSubview:btn];</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//跳转添加银行卡页面</div><div class="line">-(void)jump</div><div class="line">&#123;</div><div class="line">    PKPassLibrary * pl = [[PKPassLibrary alloc]init];</div><div class="line">    [pl openPaymentSetup];</div><div class="line">    NSLog(@&quot;跳转设置界面&quot;);</div><div class="line">&#125;</div><div class="line">//购买</div><div class="line">-(void)buy</div><div class="line">&#123;</div><div class="line">    NSLog(@&quot;开始购买&quot;);</div><div class="line">    //1.创建支付请求</div><div class="line">    PKPaymentRequest * request = [[PKPaymentRequest alloc]init];</div><div class="line">    //2.配置商家ID</div><div class="line">    request.merchantIdentifier = @&quot;yimouelng.com&quot;;</div><div class="line">    //3.配置货币代码和国家代码</div><div class="line">    request.countryCode = @&quot;CN&quot;;</div><div class="line">    request.currencyCode = @&quot;CNY&quot;;</div><div class="line">    //4.配置请求支持的支付网络</div><div class="line">    request.supportedNetworks = @[PKPaymentNetworkVisa,PKPaymentNetworkChinaUnionPay];</div><div class="line">    //5.配置处理方式</div><div class="line">    request.merchantCapabilities = PKMerchantCapability3DS;</div><div class="line">    //6.配置购买的商品列表 注意支付列表最后一个代表总和 注意名称和价钱</div><div class="line">    NSDecimalNumber * num = [NSDecimalNumber decimalNumberWithString:@&quot;998&quot;];</div><div class="line">    PKPaymentSummaryItem * item = [PKPaymentSummaryItem summaryItemWithLabel:@&quot;商品&quot; amount:num];</div><div class="line">    request.paymentSummaryItems  = @[item];</div><div class="line">    </div><div class="line">    </div><div class="line">    //附加选项 --------</div><div class="line">    request.requiredBillingAddressFields = PKAddressFieldAll;//添加收货地址</div><div class="line">    request.requiredShippingAddressFields = PKAddressFieldAll;//运输地址</div><div class="line">    </div><div class="line">    //添加快递</div><div class="line">     NSDecimalNumber * num2 = [NSDecimalNumber decimalNumberWithString:@&quot;998&quot;];</div><div class="line">    PKShippingMethod * method = [PKShippingMethod summaryItemWithLabel:@&quot;顺丰&quot; amount:num2];</div><div class="line">    method.identifier =@&quot;sf&quot;;</div><div class="line">    method.detail = @&quot;货到付款&quot;;//备注</div><div class="line">    request.shippingMethods =@[method];</div><div class="line">    </div><div class="line">    </div><div class="line">    request.applicationData = [@&quot;id = 1&quot; dataUsingEncoding:NSUTF8StringEncoding];//添加附加数据</div><div class="line">    </div><div class="line">    //7.验证用户的支付请求并跳转支付页面</div><div class="line">    PKPaymentAuthorizationViewController * auth = [[PKPaymentAuthorizationViewController alloc]initWithPaymentRequest:request];</div><div class="line">    [self presentViewController:auth animated:YES completion:nil];</div><div class="line">    </div><div class="line">    </div><div class="line">&#125;</div><div class="line">- (void)didReceiveMemoryWarning &#123;</div><div class="line">    [super didReceiveMemoryWarning];</div><div class="line">    // Dispose of any resources that can be recreated.</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Apple-Pay/" rel="tag">#Apple Pay</a>
+          
+            <a href="/tags/支付/" rel="tag">#支付</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/04/CocoaPods安装/" rel="next" title="CocoaPods安装失败解决办法,重装">
+                <i class="fa fa-chevron-left"></i> CocoaPods安装失败解决办法,重装
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/05/App上架流程/" rel="prev" title="App上架流程">
+                App上架流程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/03/18/Apple Pay支付功能集成/"
+           data-title="Apple Pay支付功能集成" data-url="http://yoursite.com/2016/03/18/Apple Pay支付功能集成/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avtar.jpg"
+               alt="唐半仙丶" />
+          <p class="site-author-name" itemprop="name">唐半仙丶</p>
+          <p class="site-description motion-element" itemprop="description">学习总结 思考感悟 知识管理</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/CoderTYD/CoderTYD.github.io" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/codertyd" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="leader6881@163.com" target="_blank" title="邮箱">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  邮箱
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Apple-Pay"><span class="nav-number">1.</span> <span class="nav-text">什么是Apple Pay</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Apple-Pay支持的设备"><span class="nav-number">2.</span> <span class="nav-text">Apple Pay支持的设备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Apple-Pay系统要求"><span class="nav-number">3.</span> <span class="nav-text">Apple Pay系统要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Apple-Pay集成"><span class="nav-number">4.</span> <span class="nav-text">Apple Pay集成</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">唐半仙丶</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"codertyd"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
