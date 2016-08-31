@@ -285,76 +285,49 @@
     <link href="http://yoursite.com/2015/06/04/CocoaPods%E5%AE%89%E8%A3%85/"/>
     <id>http://yoursite.com/2015/06/04/CocoaPods安装/</id>
     <published>2015-06-04T12:34:12.000Z</published>
-    <updated>2016-08-31T08:46:42.000Z</updated>
+    <updated>2016-08-31T13:36:45.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>CocoaPods</strong>报错, 报错, 报错… </p>
 <p>  OK,下面步入正题 在安装CocoaPods之前，首先要在本地安装好Ruby环境。</p>
 <p>  MAC系统自带ruby环境但是某些老旧机型可能ruby版本过低会报错,不过更新一下就好,而安装ruby需要RVM<br><a id="more"></a></p>
 <p>####步骤0 － 准备工作<br>首先需要切换到淘宝镜像服务器不然下面各个步奏会异常的卡顿(如果你曾经切换过可以查询出来) </p>
 <p>查看CocoaPods版本:</p>
-<blockquote>
-<p>pod –version</p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod --version</div></pre></td></tr></table></figure>
 <p> 移除现有Ruby默认源:</p>
-<blockquote>
-<p>gem sources –remove <a href="https://rubygems.org/" target="_blank" rel="external">https://rubygems.org/</a></p>
-</blockquote>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem sources --remove https://rubygems.org/</div></pre></td></tr></table></figure>
 <p> 使用新的源</p>
-<blockquote>
-<p>gem sources -a <a href="https://ruby.taobao.org/" target="_blank" rel="external">https://ruby.taobao.org/</a></p>
-</blockquote>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem sources -a https://ruby.taobao.org/</div></pre></td></tr></table></figure>
 <p> 验证新源是否替换成功:</p>
-<blockquote>
-<p>gem sources -l</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem sources -l</div></pre></td></tr></table></figure>
 <ul>
-<li>输出<br><strong><em> CURRENT SOURCES </em></strong><br><a href="https://ruby.taobao.org/" target="_blank" rel="external">https://ruby.taobao.org/</a></li>
+<li>输出<blockquote>
+<p><strong><em> CURRENT SOURCES </em></strong><br><a href="https://ruby.taobao.org/" target="_blank" rel="external">https://ruby.taobao.org/</a></p>
+</blockquote>
+</li>
 </ul>
-</blockquote>
 <p>OK准备工作结束.</p>
-<p>####步骤1 － 安装 RVM<br> RVM 是干什么的这里就不解释了(我也不知道什么玩意儿)，使用官方推荐的方法安装:</p>
-<blockquote>
-<p>curl -L <a href="https://get.rvm.io" target="_blank" rel="external">https://get.rvm.io</a> | bash -s stable</p>
-</blockquote>
+<h3 id="步骤1-－-安装-RVM"><a href="#步骤1-－-安装-RVM" class="headerlink" title="步骤1 － 安装 RVM"></a>步骤1 － 安装 RVM</h3><p> RVM 是干什么的这里就不解释了(我也不知道什么玩意儿)，使用官方推荐的方法安装:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -L https://get.rvm.io | bash -s stable</div></pre></td></tr></table></figure>
 <p>会出现,慢慢等吧<br><img src="http://upload-images.jianshu.io/upload_images/1930979-0a4a6c4effd8fbb3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="92DB7B30-F9E3-4715-9ADA-A608194BA96B.png"></p>
-<p>　　 期间可能会问你sudo管理员密码，以及自动通过homebrew安装依赖包，等待一段时间后就可以成功安装好 RVM。 然后，载入 RVM 环境（新开 Termal 就不用这么做了，会自动重新载入的）</p>
-<blockquote>
-<p>source ~/.rvm/scripts/rvm</p>
-</blockquote>
-<p>　 检查一下是否安装正确</p>
-<blockquote>
-<p>rvm -v</p>
-</blockquote>
+<p>　　 期间可能会问你sudo管理员密码，以及自动通过homebrew安装依赖包，等待一段时间后就可以成功安装好 RVM。 然后，载入 RVM 环境（新开 Termal 就不用这么做了，会自动重新载入的）<br>　　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ~/.rvm/scripts/rvm</div></pre></td></tr></table></figure></p>
+<p>　 检查一下是否安装正确<br>　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rvm -v</div></pre></td></tr></table></figure></p>
 <p>会输出:</p>
 <blockquote>
-<p>rvm 1.27.0 (latest) by Wayne E. Seguin <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x77;&#x61;&#x79;&#110;&#101;&#101;&#x73;&#101;&#x67;&#x75;&#x69;&#x6e;&#64;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;">&#x77;&#x61;&#x79;&#110;&#101;&#101;&#x73;&#101;&#x67;&#x75;&#x69;&#x6e;&#64;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;</a>, Michal Papis <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#x6d;&#112;&#x61;&#112;&#x69;&#x73;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;">&#x6d;&#112;&#x61;&#112;&#x69;&#x73;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;</a> [<a href="https://rvm.io/" target="_blank" rel="external">https://rvm.io/</a>]</p>
+<p>rvm 1.27.0 (latest) by Wayne E. Seguin <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#119;&#97;&#x79;&#110;&#x65;&#101;&#x73;&#101;&#x67;&#117;&#105;&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#119;&#97;&#x79;&#110;&#x65;&#101;&#x73;&#101;&#x67;&#117;&#105;&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a>, Michal Papis <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#x6d;&#112;&#97;&#112;&#105;&#x73;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x6d;&#112;&#97;&#112;&#105;&#x73;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a> [<a href="https://rvm.io/" target="_blank" rel="external">https://rvm.io/</a>]</p>
 </blockquote>
-<p>####步骤2 － 用 RVM 安装 Ruby 环境</p>
-<blockquote>
-<p>rvm install 2.0.0</p>
-</blockquote>
+<h3 id="步骤2-－-用-RVM-安装-Ruby-环境"><a href="#步骤2-－-用-RVM-安装-Ruby-环境" class="headerlink" title="步骤2 － 用 RVM 安装 Ruby 环境"></a>步骤2 － 用 RVM 安装 Ruby 环境</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rvm install 2.0.0</div></pre></td></tr></table></figure>
 <p>这个网址有现有的Ruby版本信息: </p>
 <blockquote>
 <p><a href="https://bugs.ruby-lang.org/projects/ruby/wiki/ReleaseEngineering" target="_blank" rel="external">https://bugs.ruby-lang.org/projects/ruby/wiki/ReleaseEngineering</a><br>看自己喜好安装那个版本</p>
 </blockquote>
 <p>　 同样继续等待漫长的下载，编译过程，完成以后，Ruby, Ruby Gems 就安装好了。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-d657a2d38f066855.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="FB59AF38-B8D0-471B-B432-01C285B7E51E.png"></p>
-<p>####步骤3 － 设置 Ruby 版本<br> RVM 装好以后，需要执行下面的命令将指定版本的 Ruby 设置为系统默认版本</p>
-<blockquote>
-<p>rvm 2.0.0 –default</p>
-</blockquote>
+<h3 id="步骤3-－-设置-Ruby-版本"><a href="#步骤3-－-设置-Ruby-版本" class="headerlink" title="步骤3 － 设置 Ruby 版本"></a>步骤3 － 设置 Ruby 版本</h3><p> RVM 装好以后，需要执行下面的命令将指定版本的 Ruby 设置为系统默认版本</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rvm 2.0.0 --default</div></pre></td></tr></table></figure>
 <p>同样，也可以用其他版本号，前提是你有用 rvm install 安装过那个版本 这个时候你可以测试是否正确</p>
-<blockquote>
-<p>ruby -v　　　　<br>输出 : ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-darwin13.0.0]　　　　</p>
-</blockquote>
-<p>####步骤4 － 安装cocoa pods<br>第四步才是正题</p>
-<blockquote>
-<p>sudo gem install cocoa pods</p>
-</blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/1930979-32b2f2ce2c34e8da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="70856AFD-6F84-485E-B156-DB1C14F89FE9.png"></p>
-<p>就安装完了. 这时你可以</p>
-<blockquote>
-<p>pod search AFNetworking</p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ruby -v　</div><div class="line">```　　　</div><div class="line"></div><div class="line">&gt;输出 : ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-darwin13.0.0]　　　　</div><div class="line"></div><div class="line">### 步骤4 － 安装cocoa pods</div><div class="line">第四步才是正题</div></pre></td></tr></table></figure>
+<p>sudo gem install cocoa pods<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">![70856AFD-6F84-485E-B156-DB1C14F89FE9.png](http://upload-images.jianshu.io/upload_images/1930979-32b2f2ce2c34e8da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div><div class="line"></div><div class="line"></div><div class="line">就安装完了. 这时你可以</div></pre></td></tr></table></figure></p>
+<p>pod search AFNetworking<br>```</p>
 <p>来检测一下 如果:</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1930979-74a09ea3a10bd92f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="5C7F3197-8167-4E31-9926-AA52EDDE8D35.png"></p>
 <p>就说明成功了.</p>
@@ -380,25 +353,28 @@
     <link href="http://yoursite.com/2015/02/13/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
     <id>http://yoursite.com/2015/02/13/第一篇/</id>
     <published>2015-02-13T12:46:25.000Z</published>
-    <updated>2016-08-31T13:25:11.000Z</updated>
+    <updated>2016-08-31T13:32:04.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="搭建-Hexo"><a href="#搭建-Hexo" class="headerlink" title="搭建 Hexo"></a>搭建 Hexo</h3><blockquote>
-<p>用了6个小时搭建了自己的一个个人博客，其中遇到过很多坑。</p>
-</blockquote>
+    <content type="html"><![CDATA[<h3 id="搭建-Hexo"><a href="#搭建-Hexo" class="headerlink" title="搭建 Hexo"></a>搭建 Hexo</h3><ul>
+<li>用了6个小时搭建了自己的一个个人博客，其中遇到过很多坑。</li>
+</ul>
 <p><strong>什么是Hexo</strong><br>Hexo是快速、简洁且高效的博客框架；依靠Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。<br>Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。<br>只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站。<br>Hexo 拥有强大的插件系统，安装插件可以让 Hexo 支持 Jade, CoffeeScript。</p>
+<blockquote>
 <p>总之，Hexo是目前最高逼格的博客系统</p>
-<h3 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h3><p> 将知识整理出来的同时，自己的知识也得到了梳理，而且更加牢固，不仅帮助了别人，同时也帮助了自己，这种共赢何乐而不为。就像现在开源大潮一发不可收拾，各大互联网公司都把自己的很多技术都开源一样。这其中，去年我看过一本书&lt;&lt;淘宝技术这十年&gt;&gt;，是阿里员工写的，除开技术外的感受就是，淘宝很多技术基本都从开源项目中改进创新而来，同时，他们也将自己的技术开源。这是一个良性循环，实现了众赢。提一下，我也是一个开源技术受益的开发者。对于我们从事技术工作的，同样也要营造这种良性循环。</p>
+</blockquote>
+<h3 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h3><p> 将知识整理出来的同时，自己的知识也得到了梳理，而且更加牢固，不仅帮助了别人，同时也帮助了自己，这种共赢何乐而不为。就像现在开源大潮一发不可收拾，各大互联网公司都把自己的很多技术都开源一样。这是一个良性循环，实现了众赢。提一下，我也是一个开源技术受益的开发者。对于我们从事技术工作的，同样也要营造这种良性循环。</p>
 <h3 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h3><ul>
 <li>微博：<a href="http://weibo.com/codertyd" target="_blank" rel="external">@唐半仙丶</a></li>
-<li>邮箱：<a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#108;&#101;&#x61;&#100;&#x65;&#x72;&#54;&#56;&#56;&#49;&#x40;&#x31;&#54;&#51;&#x2e;&#x63;&#x6f;&#x6d;">&#108;&#101;&#x61;&#100;&#x65;&#x72;&#54;&#56;&#56;&#49;&#x40;&#x31;&#54;&#51;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
+<li>邮箱：<a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x6c;&#x65;&#97;&#x64;&#x65;&#x72;&#54;&#x38;&#x38;&#x31;&#64;&#x31;&#54;&#51;&#x2e;&#99;&#111;&#109;">&#x6c;&#x65;&#97;&#x64;&#x65;&#x72;&#54;&#x38;&#x38;&#x31;&#64;&#x31;&#54;&#51;&#x2e;&#99;&#111;&#109;</a></li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;搭建-Hexo&quot;&gt;&lt;a href=&quot;#搭建-Hexo&quot; class=&quot;headerlink&quot; title=&quot;搭建 Hexo&quot;&gt;&lt;/a&gt;搭建 Hexo&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;用了6个小时搭建了自己的一个个人博客，其中遇到过很多坑。&lt;/p&gt;
-&lt;/bl
+      &lt;h3 id=&quot;搭建-Hexo&quot;&gt;&lt;a href=&quot;#搭建-Hexo&quot; class=&quot;headerlink&quot; title=&quot;搭建 Hexo&quot;&gt;&lt;/a&gt;搭建 Hexo&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;用了6个小时搭建了自己的一个个人博客，其中遇到过很多坑。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;
     
     </summary>
     

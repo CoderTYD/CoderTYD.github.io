@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2015/06/04/CocoaPods%E5%AE%89%E8%A3%85/</loc>
+    
+    <lastmod>2016-08-31T13:36:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2015/02/13/%E7%AC%AC%E4%B8%80%E7%AF%87/</loc>
     
-    <lastmod>2016-08-31T13:25:11.000Z</lastmod>
+    <lastmod>2016-08-31T13:32:04.000Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>http://yoursite.com/2015/08/15/iOS%20%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
     
     <lastmod>2016-08-31T08:48:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2015/06/04/CocoaPods%E5%AE%89%E8%A3%85/</loc>
-    
-    <lastmod>2016-08-31T08:46:42.000Z</lastmod>
     
   </url>
   
